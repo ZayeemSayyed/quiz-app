@@ -1,0 +1,178 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f172a;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container { width: 100%; max-width: 650px; }
+
+.start-screen {
+  background: #1e293b;
+  border-radius: 24px;
+  padding: 50px 40px;
+  text-align: center;
+  border: 2px solid #334155;
+}
+
+.start-screen h2 { color: #38bdf8; font-size: 28px; margin-bottom: 16px; }
+.start-screen p { color: #94a3b8; margin-bottom: 40px; font-size: 16px; line-height: 1.6; }
+
+.start-btn {
+  padding: 16px 48px;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.start-btn:hover { opacity: 0.9; transform: scale(1.03); }
+
+.quiz-screen {
+  display: none;
+  background: #1e293b;
+  border-radius: 24px;
+  padding: 40px;
+  border: 2px solid #334155;
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.question-count { color: #94a3b8; font-size: 14px; }
+
+.timer {
+  background: #0f172a;
+  color: #38bdf8;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  border: 2px solid #38bdf8;
+}
+
+.timer.urgent { border-color: #ef4444; color: #ef4444; }
+.score-display { color: #94a3b8; font-size: 14px; }
+
+.progress-bar {
+  background: #0f172a;
+  border-radius: 10px;
+  height: 8px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+.question {
+  font-size: 20px;
+  color: #e2e8f0;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.options { display: flex; flex-direction: column; gap: 12px; }
+
+.option {
+  padding: 16px 20px;
+  background: #0f172a;
+  border: 2px solid #334155;
+  border-radius: 12px;
+  color: #e2e8f0;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s;
+}
+
+.option:hover:not(:disabled) { border-color: #38bdf8; background: #0c2a3d; }
+.option.correct { border-color: #22c55e; background: #052e16; color: #22c55e; }
+.option.wrong { border-color: #ef4444; background: #1a0000; color: #ef4444; }
+.option:disabled { cursor: not-allowed; }
+
+.feedback {
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  display: none;
+}
+
+.feedback.correct { background: #052e16; color: #22c55e; border: 1px solid #22c55e; display: block; }
+.feedback.wrong { background: #1a0000; color: #ef4444; border: 1px solid #ef4444; display: block; }
+
+.next-btn {
+  margin-top: 24px;
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: none;
+}
+
+.next-btn:hover { opacity: 0.9; }
+
+.result-screen {
+  display: none;
+  background: #1e293b;
+  border-radius: 24px;
+  padding: 50px 40px;
+  text-align: center;
+  border: 2px solid #334155;
+}
+
+.result-emoji { font-size: 64px; margin-bottom: 16px; }
+.result-title { font-size: 28px; font-weight: 700; color: #e2e8f0; margin-bottom: 8px; }
+
+.result-score {
+  font-size: 64px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 20px 0;
+}
+
+.result-stats { display: flex; justify-content: center; gap: 30px; margin: 24px 0 40px; }
+
+.stat { text-align: center; background: #0f172a; padding: 16px 24px; border-radius: 12px; }
+.stat-number { font-size: 24px; font-weight: 700; color: #38bdf8; }
+.stat-label { font-size: 12px; color: #94a3b8; margin-top: 4px; }
+
+.result-message { color: #94a3b8; margin-bottom: 40px; font-size: 16px; }
+
+.restart-btn {
+  padding: 16px 48px;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.restart-btn:hover { opacity: 0.9; }

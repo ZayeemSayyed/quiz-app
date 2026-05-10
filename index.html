@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+
+  <div class="start-screen" id="startScreen">
+    <div style="font-size:56px; margin-bottom:16px">🧠</div>
+    <h2>Knowledge Quiz</h2>
+    <p>Test your knowledge across different topics.<br>10 questions • 15 seconds each • Score tracked</p>
+    <button class="start-btn" onclick="startQuiz()">Start Quiz →</button>
+  </div>
+
+  <div class="quiz-screen" id="quizScreen">
+    <div class="quiz-header">
+      <span class="question-count" id="questionCount">Question 1 of 10</span>
+      <span class="timer" id="timer">⏱ 15</span>
+      <span class="score-display" id="scoreDisplay">Score: 0</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill" style="width:0%"></div>
+    </div>
+    <div class="question" id="question"></div>
+    <div class="options" id="options"></div>
+    <div class="feedback" id="feedback"></div>
+    <button class="next-btn" id="nextBtn" onclick="nextQuestion()">Next Question →</button>
+  </div>
+
+  <div class="result-screen" id="resultScreen">
+    <div class="result-emoji" id="resultEmoji"></div>
+    <div class="result-title" id="resultTitle"></div>
+    <div class="result-score" id="resultScore"></div>
+    <div class="result-stats">
+      <div class="stat">
+        <div class="stat-number" id="correctCount"></div>
+        <div class="stat-label">Correct</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number" id="wrongCount"></div>
+        <div class="stat-label">Wrong</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number" id="timeStat"></div>
+        <div class="stat-label">Avg Time</div>
+      </div>
+    </div>
+    <div class="result-message" id="resultMessage"></div>
+    <button class="restart-btn" onclick="restartQuiz()">Play Again 🔄</button>
+  </div>
+
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
